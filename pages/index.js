@@ -18,7 +18,7 @@ const Home = ({ posts }) => {
           <Link
             key={post._id}
             href ="/posts/[slug]"
-            as={"/posts/$(post.slug.current)"}
+            as={"/posts/${post.slug.current}"}
             passHref
             >
               <Card post = {post}/>
@@ -49,5 +49,3 @@ export async function getStaticProps({preview = false}) {
     }
 }
 export default Home
-
-

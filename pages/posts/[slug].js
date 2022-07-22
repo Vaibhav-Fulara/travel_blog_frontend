@@ -21,10 +21,10 @@ const PostComponents = {
 
 const Post = ({ post }) => {
     
-    const { title, categories, body, authorImage, username, about, postedAt } = post
+    const { title, categories, body, authorImage, username, about, postedAt } = post || {}
 
     return (
-        <div>
+        <>
             {post && <article className="post-container">
                 <h1>{title}</h1>
                 <hr/>
@@ -60,7 +60,7 @@ const Post = ({ post }) => {
                 </div>
                 
                 </article>}
-        </div>
+        </>
     )
 }
 

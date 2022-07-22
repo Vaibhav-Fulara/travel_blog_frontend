@@ -3,7 +3,7 @@ import { urlFor } from '../lib/sanity'
 import Tag from './Tag'
 const Card = forwardRef(({onClick, href, post}, ref) => {
 
-    const { title, publishedAt, mainImage, username, authorImage, categories } = post
+    const { title, mainImage, username, authorImage, categories } = post
 
     return (
         <div className="card-container" href={href} onClick={onClick} ref={ref}>
